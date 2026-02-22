@@ -1,4 +1,6 @@
-export const profile = {
+import type { Profile } from './types';
+
+export const profile: Profile = {
   name: 'Ionuț-Orlando Grigore-Atimuț',
   role: 'Deep Learning Researcher',
   institution: 'Polytechnic University Timișoara',

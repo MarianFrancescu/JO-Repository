@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   Drawer,
@@ -18,15 +16,15 @@ const navItems = [
   { label: 'Studies', href: '#studies' },
   { label: 'Publications', href: '#publications' },
   { label: 'Contact', href: '#contact' },
-];
+] as const;
 
-function HeaderNav({
-  name = 'Portfolio',
-  themeMode = 'dark',
-  onToggleTheme = () => {},
-}) {
-  const [activeHref, setActiveHref] = useState('#about');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+interface HeaderNavProps {
+  name?: string;
+}
+
+function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
+  const [activeHref, setActiveHref] = useState<string>('#about');
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   useEffect(() => {
     function updateActiveFromHash() {
@@ -71,11 +69,7 @@ function HeaderNav({
     <header className="sticky top-0 z-30 bg-slate-950/55 backdrop-blur-md">
       <div className="mx-auto hidden h-16 w-[min(980px,92%)] items-stretch gap-5 md:flex">
         <div className="flex items-center gap-2">
-          <img
-            src="/logo-mark.svg"
-            alt="App logo"
-            className="h-9 w-9 rounded-md"
-          />
+          <img src="/logo-mark.svg" alt="App logo" className="h-9 w-9 rounded-md" />
           <Typography className="flex items-center !text-base !font-semibold !text-slate-100">
             {name}
           </Typography>
@@ -101,22 +95,11 @@ function HeaderNav({
             </Link>
           ))}
         </nav>
-        <IconButton
-          aria-label="Toggle theme"
-          onClick={onToggleTheme}
-          className="!my-auto !text-slate-100"
-        >
-          {themeMode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
-        </IconButton>
       </div>
 
       <div className="mx-auto flex h-14 w-[min(980px,92%)] items-center justify-between md:hidden">
         <div className="flex items-center gap-2">
-          <img
-            src="/logo-mark.svg"
-            alt="App logo"
-            className="h-8 w-8 rounded-md"
-          />
+          <img src="/logo-mark.svg" alt="App logo" className="h-8 w-8 rounded-md" />
           <Typography className="max-w-[65vw] truncate !text-sm !font-semibold !text-slate-100">
             {name}
           </Typography>
@@ -138,26 +121,16 @@ function HeaderNav({
         PaperProps={{
           sx: {
             width: 280,
-            bgcolor:
-              themeMode === 'dark'
-                ? 'rgba(2, 10, 26, 0.96)'
-                : 'rgba(246, 251, 255, 0.98)',
-            color: themeMode === 'dark' ? '#e2ecf4' : '#0f172a',
-            borderRight:
-              themeMode === 'dark'
-                ? '1px solid rgba(14, 116, 144, 0.45)'
-                : '1px solid rgba(56, 132, 160, 0.28)',
+            bgcolor: 'rgba(2, 10, 26, 0.96)',
+            color: '#e2ecf4',
+            borderRight: '1px solid rgba(14, 116, 144, 0.45)',
             backdropFilter: 'blur(8px)',
           },
         }}
       >
         <div className="flex h-16 items-center border-b border-cyan-900/60 px-4">
           <div className="flex items-center gap-2">
-            <img
-              src="/logo-mark.svg"
-              alt="App logo"
-              className="h-8 w-8 rounded-md"
-            />
+            <img src="/logo-mark.svg" alt="App logo" className="h-8 w-8 rounded-md" />
             <Typography className="!text-base !font-semibold !text-slate-100">
               {name}
             </Typography>
@@ -184,14 +157,6 @@ function HeaderNav({
               <ListItemText primary={item.label} />
             </ListItemButton>
           ))}
-          <ListItemButton
-            onClick={onToggleTheme}
-            className="!mx-2 !mt-2 !rounded-lg !text-slate-200"
-          >
-            <ListItemText
-              primary={themeMode === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
-            />
-          </ListItemButton>
         </List>
       </Drawer>
     </header>

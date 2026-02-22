@@ -1,6 +1,11 @@
 import { Typography } from '@mui/material';
+import type { Profile } from '../data/types';
 
-function TitleHeading({ profile }) {
+interface TitleHeadingProps {
+  profile: Profile;
+}
+
+function TitleHeading({ profile }: TitleHeadingProps): JSX.Element {
   const accentText = 'Scalable Architectures.';
   const headlinePrefix = profile.headline.endsWith(accentText)
     ? profile.headline.slice(0, -accentText.length)

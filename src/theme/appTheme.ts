@@ -1,17 +1,15 @@
-import { createTheme } from '@mui/material';
+import { createTheme, type Theme } from '@mui/material';
 
-export function getAppTheme(mode = 'dark') {
-  const isDark = mode === 'dark';
-
+export function getAppTheme(): Theme {
   return createTheme({
     palette: {
-      mode,
+      mode: 'dark',
       primary: {
         main: '#22d3ee',
       },
       background: {
         default: 'transparent',
-        paper: isDark ? 'rgba(15, 23, 42, 0.66)' : 'rgba(255, 255, 255, 0.86)',
+        paper: 'rgba(15, 23, 42, 0.66)',
       },
     },
     typography: {
@@ -42,8 +40,8 @@ export function getAppTheme(mode = 'dark') {
       MuiOutlinedInput: {
         styleOverrides: {
           root: {
-            backgroundColor: isDark ? 'rgba(2, 10, 26, 0.65)' : 'rgba(247, 250, 252, 0.95)',
-            color: isDark ? '#e6f2f8' : '#0f172a',
+            backgroundColor: 'rgba(2, 10, 26, 0.65)',
+            color: '#e6f2f8',
             '& fieldset': {
               borderColor: 'rgba(56, 189, 248, 0.28)',
             },
@@ -60,7 +58,7 @@ export function getAppTheme(mode = 'dark') {
       MuiInputLabel: {
         styleOverrides: {
           root: {
-            color: isDark ? '#93c5d6' : '#0f4a5c',
+            color: '#93c5d6',
           },
         },
       },

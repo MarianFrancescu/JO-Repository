@@ -1,6 +1,11 @@
 import { Typography } from '@mui/material';
+import type { Profile } from '../data/types';
 
-function About({ profile }) {
+interface AboutProps {
+  profile: Profile;
+}
+
+function About({ profile }: AboutProps): JSX.Element {
   return (
     <section id="about" className="scroll-mt-24 mb-12 md:mb-16">
       <div className="mb-5 flex items-center gap-4">

@@ -1,4 +1,6 @@
-export const publications = [
+import type { PublicationItem } from './types';
+
+export const publications: PublicationItem[] = [
   {
     venue: 'arXiv 2024',
     title:

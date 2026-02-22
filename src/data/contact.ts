@@ -1,4 +1,6 @@
-export const contact = {
+import type { ContactInfo } from './types';
+
+export const contact: ContactInfo = {
   email: 'Verified email at cs.upt.ro',
   location: 'Timisoara, Romania',
   intro:

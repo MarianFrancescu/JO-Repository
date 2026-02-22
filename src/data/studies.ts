@@ -1,4 +1,6 @@
-export const studies = [
+import type { StudyItem } from './types';
+
+export const studies: StudyItem[] = [
   {
     degree: 'PhD in Artificial Intelligence',
     school: 'Universitatea Politehnica Timisoara',

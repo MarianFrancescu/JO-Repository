@@ -15,14 +15,10 @@ import {
   studies,
 } from '../data/portfolioData';
 
-function PortfolioPage({ themeMode, onToggleTheme }) {
+function PortfolioPage(): JSX.Element {
   return (
     <>
-      <HeaderNav
-        name={profile.name}
-        themeMode={themeMode}
-        onToggleTheme={onToggleTheme}
-      />
+      <HeaderNav name={profile.name} />
 
       <main
         id="main-content"

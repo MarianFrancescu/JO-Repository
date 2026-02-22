@@ -1,6 +1,11 @@
 import { Card, CardContent, Link, Typography } from '@mui/material';
+import type { PublicationItem } from '../data/types';
 
-function Publications({ items }) {
+interface PublicationsProps {
+  items: PublicationItem[];
+}
+
+function Publications({ items }: PublicationsProps): JSX.Element {
   return (
     <section id="publications" className="scroll-mt-24 mb-12 md:mb-16">
       <div className="mb-5 flex items-center gap-4">

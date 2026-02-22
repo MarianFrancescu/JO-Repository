@@ -1,6 +1,11 @@
 import { Card, CardContent, List, ListItem, Typography } from '@mui/material';
+import type { ExperienceItem } from '../data/types';
 
-function Experience({ items }) {
+interface ExperienceProps {
+  items: ExperienceItem[];
+}
+
+function Experience({ items }: ExperienceProps): JSX.Element {
   return (
     <section id="experience" className="scroll-mt-24 mb-12 md:mb-16">
       <div className="mb-5 flex items-center gap-4">

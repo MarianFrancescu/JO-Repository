@@ -1,4 +1,6 @@
-export const experiences = [
+import type { ExperienceItem } from './types';
+
+export const experiences: ExperienceItem[] = [
   {
     title: 'AI Researcher (PhD Candidate)',
     organization: 'Universitatea Politehnica Timisoara, Romania',
