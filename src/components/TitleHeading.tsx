@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import type { Profile } from '../data/types';
+import type { Profile } from '../../data/types';
 
 interface TitleHeadingProps {
   profile: Profile;

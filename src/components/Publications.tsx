@@ -1,5 +1,5 @@
 import { Card, CardContent, Link, Typography } from '@mui/material';
-import type { PublicationItem } from '../data/types';
+import type { PublicationItem } from '../../data/types';
 
 interface PublicationsProps {
   items: PublicationItem[];

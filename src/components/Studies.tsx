@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography } from '@mui/material';
-import type { StudyItem } from '../data/types';
+import type { StudyItem } from '../../data/types';
 
 interface StudiesProps {
   items: StudyItem[];

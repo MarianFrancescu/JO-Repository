@@ -1,5 +1,5 @@
 import { Card, CardContent, List, ListItem, Typography } from '@mui/material';
-import type { ExperienceItem } from '../data/types';
+import type { ExperienceItem } from '../../data/types';
 
 interface ExperienceProps {
   items: ExperienceItem[];

@@ -1,6 +1,6 @@
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import { Button, Card, CardContent, Divider, Link, List, ListItem, Typography } from '@mui/material';
-import { materials } from '../data/materials';
+import { materials } from '../../data/materials';
 
 function MaterialsPage(): JSX.Element {
   return (

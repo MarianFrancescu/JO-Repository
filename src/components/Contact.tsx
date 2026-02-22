@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import type { ContactInfo } from '../data/types';
+import type { ContactInfo } from '../../data/types';
 
 interface ContactProps {
   details: ContactInfo;

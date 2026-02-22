@@ -13,7 +13,7 @@ import {
   profile,
   publications,
   studies,
-} from '../data/portfolioData';
+} from '../../data/portfolioData';
 
 function PortfolioPage(): JSX.Element {
   return (
