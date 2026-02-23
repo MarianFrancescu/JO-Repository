@@ -39,7 +39,7 @@ function TitleHeading({ profile }: TitleHeadingProps): JSX.Element {
           event.currentTarget.onerror = null;
           event.currentTarget.src = fallbackPhotoSrc;
         }}
-        className="h-24 w-24 shrink-0 rounded-2xl object-cover ring-2 ring-cyan-700/60 md:ml-auto md:h-28 md:w-28"
+        className="order-first h-24 w-24 shrink-0 rounded-2xl object-cover ring-2 ring-cyan-700/60 md:order-none md:ml-auto md:h-28 md:w-28"
       />
     </section>
   );
