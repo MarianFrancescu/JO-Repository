@@ -1,11 +1,24 @@
-import { Card, CardContent, Link, Typography } from '@mui/material';
+import { useMemo, useState } from 'react';
+import { Button, Card, CardContent, Link, Typography } from '@mui/material';
 import type { PublicationItem } from '../../data/types';
 
 interface PublicationsProps {
   items: PublicationItem[];
 }
 
+const filterOptions: Array<{ label: string; value: PublicationItem['filter'] }> = [
+  { label: 'Research', value: 'research' },
+  { label: 'Problems', value: 'problems' },
+  { label: 'Articles', value: 'articles' },
+];
+
 function Publications({ items }: PublicationsProps): JSX.Element {
+  const [activeFilter, setActiveFilter] = useState<PublicationItem['filter']>('research');
+  const filteredItems = useMemo(
+    () => items.filter((publication) => publication.filter === activeFilter),
+    [items, activeFilter],
+  );
+
   return (
     <section id="publications" className="scroll-mt-24 mb-12 md:mb-16">
       <div className="mb-5 flex items-center gap-4">
@@ -15,8 +28,27 @@ function Publications({ items }: PublicationsProps): JSX.Element {
         <div className="h-px flex-1 bg-gradient-to-r from-cyan-800/70 to-transparent" />
       </div>
 
-      <div className="grid gap-3">
-        {items.map((publication) => (
+      <div className="mb-4 flex flex-wrap gap-2">
+        {filterOptions.map((option) => (
+          <Button
+            key={option.value}
+            size="small"
+            variant={activeFilter === option.value ? 'contained' : 'outlined'}
+            onClick={() => setActiveFilter(option.value)}
+            className="!rounded-full !px-4 !font-semibold"
+          >
+            {option.label}
+          </Button>
+        ))}
+      </div>
+
+      {filteredItems.length === 0 ? (
+        <Typography className="!text-slate-300">
+          No items found for this filter.
+        </Typography>
+      ) : (
+        <div className="grid gap-3">
+        {filteredItems.map((publication) => (
           <Card
             key={publication.title}
             className="!rounded-xl !border !border-cyan-900/50 !bg-slate-900/55"
@@ -44,7 +76,8 @@ function Publications({ items }: PublicationsProps): JSX.Element {
             </CardContent>
           </Card>
         ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 }

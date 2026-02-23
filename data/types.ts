@@ -22,6 +22,7 @@ export interface StudyItem {
 }
 
 export interface PublicationItem {
+  filter: 'research' | 'problems' | 'articles';
   venue: string;
   title: string;
   authors: string;

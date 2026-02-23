@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
@@ -31,15 +30,6 @@ function PortfolioPage(): JSX.Element {
         <Publications items={publications} />
         <Contact details={contact} />
         <Footer profile={profile} />
-        <div className="mt-6 flex justify-center">
-          <Button
-            variant="contained"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="!rounded-lg !bg-cyan-400 !px-5 !py-2 !font-semibold !text-slate-950 hover:!bg-cyan-300"
-          >
-            Back to Top
-          </Button>
-        </div>
       </main>
     </>
   );
