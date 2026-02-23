@@ -6,10 +6,6 @@ interface FooterProps {
 }
 
 function Footer({ profile }: FooterProps): JSX.Element {
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
-  const routePrefix = basePath || '';
-  const materialsPath = `${routePrefix}/materials`;
-
   return (
     <footer className="mt-8 border-t border-cyan-900/50 pt-5 pb-8">
       <div className="flex flex-col items-start justify-between gap-3 text-sm text-slate-400 md:flex-row md:items-center">
@@ -17,9 +13,6 @@ function Footer({ profile }: FooterProps): JSX.Element {
           © 2026 {profile.name}. All rights reserved.
         </Typography>
         <div className="flex items-center gap-4">
-          <Link href={materialsPath} underline="hover" className="!text-slate-200 hover:!text-white">
-            Materials
-          </Link>
           <Link
             href="https://scholar.google.com/"
             target="_blank"

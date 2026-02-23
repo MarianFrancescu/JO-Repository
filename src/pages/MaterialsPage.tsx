@@ -12,7 +12,7 @@ import {
 import { materials } from "../../data/materials";
 
 function MaterialsPage(): JSX.Element {
-  const logoSrc = `${import.meta.env.BASE_URL}logo-mark.svg`;
+  const logoSrc = `${import.meta.env.BASE_URL}assets/logo-mark.svg`;
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
   const routePrefix = basePath || '';
   const portfolioPath = `${routePrefix}/portfolio`;

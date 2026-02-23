@@ -23,7 +23,10 @@ interface HeaderNavProps {
 }
 
 function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
-  const logoSrc = `${import.meta.env.BASE_URL}logo-mark.svg`;
+  const logoSrc = `${import.meta.env.BASE_URL}assets/logo-mark.svg`;
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const routePrefix = basePath || '';
+  const materialsPath = `${routePrefix}/materials`;
   const [activeHref, setActiveHref] = useState<string>('#about');
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
@@ -36,6 +39,27 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
 
     function updateActiveFromScroll() {
       const sectionIds = navItems.map((item) => item.href.slice(1));
+      const reachedPageBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+
+      if (reachedPageBottom) {
+        setActiveHref('#contact');
+        return;
+      }
+
+      const hashHref = window.location.hash;
+      if (sectionIds.includes(hashHref.slice(1))) {
+        const hashSection = document.getElementById(hashHref.slice(1));
+        if (hashSection) {
+          const rect = hashSection.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+          if (isVisible) {
+            setActiveHref(hashHref);
+            return;
+          }
+        }
+      }
+
       let current = '#about';
       let bestTop = -Infinity;
 
@@ -95,6 +119,13 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
               {item.label}
             </Link>
           ))}
+          <Link
+            href={materialsPath}
+            underline="none"
+            className="flex items-center whitespace-nowrap !px-4 !text-base !font-semibold !bg-blue-500/20 !text-blue-100 hover:!bg-blue-500/30"
+          >
+            Materials
+          </Link>
         </nav>
       </div>
 
@@ -158,6 +189,14 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
               <ListItemText primary={item.label} />
             </ListItemButton>
           ))}
+          <ListItemButton
+            component="a"
+            href={materialsPath}
+            onClick={() => setIsSidebarOpen(false)}
+            className="!mx-2 !mb-1 !rounded-lg !bg-blue-500/20 !text-blue-100 hover:!bg-blue-500/30"
+          >
+            <ListItemText primary="Materials" />
+          </ListItemButton>
         </List>
       </Drawer>
     </header>
