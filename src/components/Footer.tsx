@@ -1,5 +1,5 @@
-import { Link, Typography } from '@mui/material';
-import type { Profile } from '../../data/types';
+import { Link, Typography } from "@mui/material";
+import type { Profile } from "../../data/types";
 
 interface FooterProps {
   profile: Profile;
@@ -14,12 +14,19 @@ function Footer({ profile }: FooterProps): JSX.Element {
         </Typography>
         <div className="flex items-center gap-4">
           <Link
-            href="https://scholar.google.com/"
+            href="https://github.com/ionut-grigore99"
             target="_blank"
             rel="noopener noreferrer"
             underline="hover"
-            className="!text-slate-200 hover:!text-white"
-          >
+            className="!text-slate-200 hover:!text-white">
+            GitHub
+          </Link>
+          <Link
+            href="https://scholar.google.com/citations?user=7ND7joYAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            underline="hover"
+            className="!text-slate-200 hover:!text-white">
             Google Scholar
           </Link>
           <Link
@@ -27,8 +34,7 @@ function Footer({ profile }: FooterProps): JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
             underline="hover"
-            className="!text-slate-200 hover:!text-white"
-          >
+            className="!text-slate-200 hover:!text-white">
             arXiv
           </Link>
         </div>

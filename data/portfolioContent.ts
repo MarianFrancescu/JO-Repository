@@ -12,30 +12,33 @@ const linkedInPublications =
 
 export const profile: Profile = {
   name: "Ionut Grigore",
-  role: "Applied Scientist | Teaching Assistant | PhD Student",
-  institution: "Politehnica University Timisoara",
-  headline: "Building practical AI systems while continuously learning.",
+  role: "AI Engineer | Teaching Assistant | PhD Student",
+  institution: "Polytechnic University of Timisoara",
+  headline:
+    "Computer vision researcher building practical AI for digital dentistry and medical imaging.",
   about:
-    '"I am still learning!" - Inspired by Michelangelo\'s words, I focus on applied machine learning and computer vision research, while teaching and collaborating on real-world AI products.',
+    '"I am still learning!" - Inspired by Michelangelo\'s words, I focus on deep learning research for computer vision and on deploying production AI systems. My current work spans digital dentistry, medical imaging, and uncertainty-aware depth estimation.',
 };
 
 export const experiences: ExperienceItem[] = [
   {
-    title: "Applied Scientist",
+    title: "AI Engineer",
     organization: "Smilecloud",
     period: "Jul 2025 - Present",
     bullets: [
-      "Designing and deploying applied AI solutions for production use cases.",
-      "Working across research and engineering to turn ML prototypes into reliable products.",
+      "Designing and deploying machine learning models for digital dentistry workflows.",
+      "Working on 2D teeth segmentation, 2D-3D alignment between facial images and intraoral scans, and monocular camera parameter estimation.",
+      "Researching diffusion-based inpainting and image enhancement methods, including automatic white-balance correction for real user photos.",
     ],
   },
   {
     title: "Teaching Assistant",
-    organization: "Politehnica University Timisoara",
-    period: "Mar 2022 - Present",
+    organization: "Polytechnic University of Timisoara",
+    period: "Feb 2022 - Present",
     bullets: [
-      "Supporting courses and labs in AI and computer science topics.",
-      "Mentoring students on practical machine learning projects and research direction.",
+      "Teaching AI Foundations for 3rd-year students: linear models, trees, clustering, CNNs, RNNs, attention, and Transformers.",
+      "Teaching Computer Assisted Mathematics Laboratory for 1st-year students using MATLAB.",
+      "Mentoring students on practical machine learning projects and fundamentals.",
     ],
   },
   {
@@ -43,17 +46,19 @@ export const experiences: ExperienceItem[] = [
     organization: "Siemens",
     period: "Apr 2024 - Jul 2025",
     bullets: [
-      "Contributed to applied research initiatives in AI and data-driven systems.",
-      "Collaborated with cross-functional teams to evaluate and integrate ML methods.",
+      "Contributed to the ProstateAI project: fully automated AI workflow for prostate MRI examination.",
+      "Developed segmentation and detection pipelines for prostate gland and lesion analysis based on nnU-Net.",
+      "Built a T2-weighted MRI scan quality assessment model to predict volume-level quality scores.",
     ],
   },
   {
     title: "Applied Scientist",
-    organization: "Amazon",
+    organization: "Amazon (Ring)",
     period: "Nov 2022 - Apr 2024",
     bullets: [
-      "Built and improved scalable machine learning solutions for applied business problems.",
-      "Focused on model quality, reliability, and measurable product impact.",
+      "Researched and evaluated SOTA methods for depth completion, feature detection/matching, semantic segmentation, and pose estimation.",
+      "Developed and improved models for Ring drone perception tasks, including dock segmentation and positional offset estimation.",
+      "Advanced SuperPoint-style feature pipelines, leading to acceptance at EEML 2025 for presenting feature detection and matching work.",
     ],
   },
   {
@@ -64,6 +69,15 @@ export const experiences: ExperienceItem[] = [
       "Worked on EB Corbos Studio, an Eclipse-based IDE for Adaptive AUTOSAR workflows.",
       "Used Java, EMF, Eclipse API, JUnit, Jenkins, XML, Apache Ant, and Git in an agile setup.",
       "Contributed to tooling quality with static analysis and UI testing (PMD, Checkstyle, SonarLint, QFT).",
+    ],
+  },
+  {
+    title: "Mathematics and Informatics Substitute Teacher",
+    organization: "Wendy School Timisoara",
+    period: "Oct 2021 - Dec 2021",
+    bullets: [
+      "Taught mathematics and informatics classes as substitute teacher.",
+      "Strengthened classroom communication and instructional planning skills.",
     ],
   },
   {
@@ -81,35 +95,35 @@ export const experiences: ExperienceItem[] = [
 export const studies: StudyItem[] = [
   {
     degree: "PhD in Deep Learning",
-    school: "Politehnica University Timisoara",
+    school: "Polytechnic University of Timisoara",
     years: "2024 - 2028",
     details:
-      "Doctoral research focused on deep learning methods for computer vision and robust representation learning.",
-    note: "Current PhD student",
+      "Researching uncertainty estimation for self-supervised depth estimation using Bayesian deep learning in the national HRIA (Romanian Hub for Artificial Intelligence) project.",
+    note: "Current PhD student (research track)",
   },
   {
     degree: "Master of Engineering (Machine Learning)",
     school: "Politehnica University of Timisoara",
     years: "2022 - 2024",
     details:
-      "Graduated with top grade (10), with advanced coursework in machine learning and practical AI systems.",
-    note: "MEng, grade 10",
+      "Dissertation thesis: MambaDepth, integrating state-space modeling ideas for self-supervised monocular depth estimation.",
+    note: "Graduated 10/10, Best Poster Award at EEML 2024 (Novi Sad)",
   },
   {
     degree: "Bachelor's Degree in Computer Science",
     school: "Politehnica University of Timisoara",
     years: "2018 - 2022",
     details:
-      "Bachelor thesis: self-supervised monocular depth estimation using ManyDepth, evaluated across modern encoder-decoder backbones and standard benchmarks.",
-    note: "Graduated with grade 10",
+      "Bachelor thesis: Self-Supervised Monocular Depth Estimation using ManyDepth, with strong focus on deep learning and computer vision fundamentals.",
+    note: "Graduated 10/10 (Magna Cum Laude)",
   },
   {
     degree: "High School",
     school: '"Grigore Moisil" High School, Timisoara',
     years: "2014 - 2018",
     details:
-      "Science-focused high school track with strong emphasis on mathematics.",
-    note: "Pre-university studies",
+      "Mathematics and informatics profile with strong foundations in mathematics, science, and digital competencies.",
+    note: "Baccalaureate grade: 9.83/10",
   },
 ];
 
@@ -151,7 +165,7 @@ export const publications: PublicationItem[] = [
     title:
       'A problem for lot selection at Junior Balkan Mathematical Olympiad-2016 published in "ROMANIAN MATHEMATICAL COMPETITIONS-RMC 2016", problem 7, page 72',
     authors: "I. Grigore",
-    link: linkedInPublications,
+    link: "https://pregatirematematicaolimpiadejuniori.files.wordpress.com/2016/07/2016_tests-1234.pdf",
   },
   {
     filter: "problems",
@@ -188,10 +202,10 @@ export const publications: PublicationItem[] = [
 ];
 
 export const contact: ContactInfo = {
-  email: "ionut.grigore0506@gmail.com",
+  email: "ionut.orlando@yahoo.com",
   location: "Timisoara, Timis, Romania",
   intro:
-    "Open to research collaboration, applied AI opportunities, and academic partnerships.",
+    "Open to research collaborations and applied AI roles in computer vision, medical imaging, and production ML systems.",
 };
 
 export const materials: MaterialSection[] = [
