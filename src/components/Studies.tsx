@@ -15,7 +15,7 @@ function Studies({ items }: StudiesProps): JSX.Element {
         <div className="h-px flex-1 bg-gradient-to-r from-cyan-800/70 to-transparent" />
       </div>
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-4">
         {items.map((study) => (
           <Card
             key={study.degree}

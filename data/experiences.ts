@@ -2,31 +2,59 @@ import type { ExperienceItem } from './types';
 
 export const experiences: ExperienceItem[] = [
   {
-    title: 'AI Researcher (PhD Candidate)',
-    organization: 'Universitatea Politehnica Timisoara, Romania',
-    period: '2022 - Present',
+    title: 'Applied Scientist',
+    organization: 'Smilecloud',
+    period: 'Jul 2025 - Present',
     bullets: [
-      'Researching scalable neuro-symbolic architectures for trustworthy language models.',
-      'Built distributed training pipelines for low-resource Romanian and multilingual datasets.',
-      'Co-authored papers on reasoning robustness and retrieval-augmented learning.',
+      'Designing and deploying applied AI solutions for production use cases.',
+      'Working across research and engineering to turn ML prototypes into reliable products.',
     ],
   },
   {
-    title: 'Machine Learning Engineer',
-    organization: 'Research Innovation Lab, Timisoara',
-    period: '2020 - 2022',
+    title: 'Teaching Assistant',
+    organization: 'Politehnica University Timisoara',
+    period: 'Mar 2022 - Present',
     bullets: [
-      'Designed production NLP systems for document intelligence and semantic search.',
-      'Improved inference efficiency with model distillation and quantization workflows.',
+      'Supporting courses and labs in AI and computer science topics.',
+      'Mentoring students on practical machine learning projects and research direction.',
     ],
   },
   {
-    title: 'Research Intern',
-    organization: 'Computer Vision Group, Cluj-Napoca',
-    period: '2019 - 2020',
+    title: 'AI Research Scientist',
+    organization: 'Siemens',
+    period: 'Apr 2024 - Jul 2025',
     bullets: [
-      'Developed attention-based models for medical image segmentation.',
-      'Created reproducible training benchmarks and evaluation scripts.',
+      'Contributed to applied research initiatives in AI and data-driven systems.',
+      'Collaborated with cross-functional teams to evaluate and integrate ML methods.',
+    ],
+  },
+  {
+    title: 'Applied Scientist',
+    organization: 'Amazon',
+    period: 'Nov 2022 - Apr 2024',
+    bullets: [
+      'Built and improved scalable machine learning solutions for applied business problems.',
+      'Focused on model quality, reliability, and measurable product impact.',
+    ],
+  },
+  {
+    title: 'Junior Software Engineer',
+    organization: 'Elektrobit (Timisoara, Romania)',
+    period: 'Feb 2022 - Oct 2022',
+    bullets: [
+      'Worked on EB Corbos Studio, an Eclipse-based IDE for Adaptive AUTOSAR workflows.',
+      'Used Java, EMF, Eclipse API, JUnit, Jenkins, XML, Apache Ant, and Git in an agile setup.',
+      'Contributed to tooling quality with static analysis and UI testing (PMD, Checkstyle, SonarLint, QFT).',
+    ],
+  },
+  {
+    title: 'Intern',
+    organization: 'ATOSS Software AG (Timisoara, Romania)',
+    period: 'Jun 2021 - Aug 2021',
+    bullets: [
+      'Developed a full-stack virtual library application during internship training.',
+      'Built backend features with Spring Boot and MySQL, including controllers and tests.',
+      'Implemented frontend pages with Vue.js and validated APIs with Postman.',
     ],
   },
 ];

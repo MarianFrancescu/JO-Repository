@@ -2,27 +2,34 @@ import type { StudyItem } from './types';
 
 export const studies: StudyItem[] = [
   {
-    degree: 'PhD in Artificial Intelligence',
-    school: 'Universitatea Politehnica Timisoara',
-    years: '2022 - Present',
+    degree: 'PhD in Deep Learning',
+    school: 'Politehnica University Timisoara',
+    years: '2024 - 2028',
     details:
-      'Thesis direction: Scalable architectures for hybrid symbolic-neural reasoning.',
-    note: 'Advisor: Prof. Andrei Ionescu',
+      'Doctoral research focused on deep learning methods for computer vision and robust representation learning.',
+    note: 'Current PhD student',
   },
   {
-    degree: 'MSc in Computer Science',
-    school: 'Universitatea Politehnica Timisoara',
-    years: '2020 - 2022',
+    degree: 'Master of Engineering (Machine Learning)',
+    school: 'Politehnica University of Timisoara',
+    years: '2022 - 2024',
     details:
-      'Specialization in machine learning, distributed systems, and AI optimization.',
-    note: 'Graduated with distinction',
+      'Graduated with top grade (10), with advanced coursework in machine learning and practical AI systems.',
+    note: 'MEng, grade 10',
   },
   {
-    degree: 'BSc in Automation and Computers',
-    school: 'Universitatea Politehnica Timisoara',
-    years: '2016 - 2020',
+    degree: 'Bachelor\'s Degree in Computer Science',
+    school: 'Politehnica University of Timisoara',
+    years: '2018 - 2022',
     details:
-      'Focused on algorithms, software engineering, and data-driven systems.',
-    note: 'Final project on multilingual NLP pipelines',
+      'Bachelor thesis: self-supervised monocular depth estimation using ManyDepth, evaluated across modern encoder-decoder backbones and standard benchmarks.',
+    note: 'Graduated with grade 10',
+  },
+  {
+    degree: 'High School',
+    school: '"Grigore Moisil" High School, Timisoara',
+    years: '2014 - 2018',
+    details: 'Science-focused high school track with strong emphasis on mathematics.',
+    note: 'Pre-university studies',
   },
 ];

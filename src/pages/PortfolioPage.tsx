@@ -1,18 +1,18 @@
-import About from '../components/About';
-import Contact from '../components/Contact';
-import Experience from '../components/Experience';
-import Footer from '../components/Footer';
-import HeaderNav from '../components/HeaderNav';
-import Publications from '../components/Publications';
-import Studies from '../components/Studies';
-import TitleHeading from '../components/TitleHeading';
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Experience from "../components/Experience";
+import Footer from "../components/Footer";
+import HeaderNav from "../components/HeaderNav";
+import Publications from "../components/Publications";
+import Studies from "../components/Studies";
+import TitleHeading from "../components/TitleHeading";
 import {
   contact,
   experiences,
   profile,
   publications,
   studies,
-} from '../../data/portfolioData';
+} from "../../data/portfolioData";
 
 function PortfolioPage(): JSX.Element {
   return (
@@ -21,8 +21,7 @@ function PortfolioPage(): JSX.Element {
 
       <main
         id="main-content"
-        className="relative z-10 mx-auto w-[min(980px,92%)] py-14 md:py-16"
-      >
+        className="relative z-10 mx-auto w-[min(980px,92%)] py-6 md:py-8">
         <TitleHeading profile={profile} />
         <About profile={profile} />
         <Experience items={experiences} />
