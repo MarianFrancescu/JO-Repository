@@ -5,10 +5,19 @@ import { getAppTheme } from './theme/appTheme';
 
 function App(): JSX.Element {
   const theme = getAppTheme();
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const routePrefix = basePath || '';
+  const portfolioPath = `${routePrefix}/portfolio`;
+  const materialsPath = `${routePrefix}/materials`;
   const rawPath = window.location.pathname || '/';
   const path = rawPath.length > 1 ? rawPath.replace(/\/$/, '') : rawPath;
-  const isPortfolioRoute = path === '/' || path === '/portfolio';
-  const isMaterialsRoute = path === '/materials';
+  const normalizedPath =
+    routePrefix && path.startsWith(routePrefix)
+      ? path.slice(routePrefix.length) || '/'
+      : path;
+  const isPortfolioRoute =
+    normalizedPath === '/' || normalizedPath === '/portfolio';
+  const isMaterialsRoute = normalizedPath === '/materials';
 
   return (
     <ThemeProvider theme={theme}>
@@ -33,10 +42,10 @@ function App(): JSX.Element {
               Use one of the available routes:
             </Typography>
             <div className="flex items-center gap-4">
-              <Link href="/portfolio" underline="hover" className="!text-cyan-200">
+              <Link href={portfolioPath} underline="hover" className="!text-cyan-200">
                 /portfolio
               </Link>
-              <Link href="/materials" underline="hover" className="!text-cyan-200">
+              <Link href={materialsPath} underline="hover" className="!text-cyan-200">
                 /materials
               </Link>
             </div>

@@ -12,12 +12,17 @@ import {
 import { materials } from "../../data/materials";
 
 function MaterialsPage(): JSX.Element {
+  const logoSrc = `${import.meta.env.BASE_URL}logo-mark.svg`;
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const routePrefix = basePath || '';
+  const portfolioPath = `${routePrefix}/portfolio`;
+
   return (
     <div className="relative z-10 mx-auto w-[min(980px,92%)] py-6 md:py-8">
       <header className="mb-10">
         <div className="flex items-center gap-3">
           <img
-            src="/logo-mark.svg"
+            src={logoSrc}
             alt="App logo"
             className="h-9 w-9 rounded-md"
           />
@@ -28,7 +33,7 @@ function MaterialsPage(): JSX.Element {
           </Typography>
         </div>
         <Button
-          href="/portfolio"
+          href={portfolioPath}
           startIcon={<ArrowBackRoundedIcon />}
           variant="outlined"
           className="!mt-5 !rounded-lg !border-cyan-700/70 !px-4 !py-2 !font-semibold !text-cyan-100 hover:!border-cyan-500 hover:!bg-cyan-500/10">

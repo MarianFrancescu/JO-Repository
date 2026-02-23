@@ -23,6 +23,7 @@ interface HeaderNavProps {
 }
 
 function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
+  const logoSrc = `${import.meta.env.BASE_URL}logo-mark.svg`;
   const [activeHref, setActiveHref] = useState<string>('#about');
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
@@ -69,7 +70,7 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
     <header className="sticky top-0 z-30 bg-slate-950/55 backdrop-blur-md">
       <div className="mx-auto hidden h-16 w-[min(980px,92%)] items-stretch gap-5 md:flex">
         <div className="flex items-center gap-2">
-          <img src="/logo-mark.svg" alt="App logo" className="h-9 w-9 rounded-md" />
+          <img src={logoSrc} alt="App logo" className="h-9 w-9 rounded-md" />
           <Typography className="flex items-center !text-base !font-semibold !text-slate-100">
             {name}
           </Typography>
@@ -99,7 +100,7 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
 
       <div className="mx-auto flex h-14 w-[min(980px,92%)] items-center justify-between md:hidden">
         <div className="flex items-center gap-2">
-          <img src="/logo-mark.svg" alt="App logo" className="h-8 w-8 rounded-md" />
+          <img src={logoSrc} alt="App logo" className="h-8 w-8 rounded-md" />
           <Typography className="max-w-[65vw] truncate !text-sm !font-semibold !text-slate-100">
             {name}
           </Typography>
@@ -130,7 +131,7 @@ function HeaderNav({ name = 'Portfolio' }: HeaderNavProps): JSX.Element {
       >
         <div className="flex h-16 items-center border-b border-cyan-900/60 px-4">
           <div className="flex items-center gap-2">
-            <img src="/logo-mark.svg" alt="App logo" className="h-8 w-8 rounded-md" />
+            <img src={logoSrc} alt="App logo" className="h-8 w-8 rounded-md" />
             <Typography className="!text-base !font-semibold !text-slate-100">
               {name}
             </Typography>
